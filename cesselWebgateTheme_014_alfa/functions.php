@@ -62,7 +62,12 @@ function get_sitedata($varname)
 		return get_metadata('post',$page->ID, $varname, true);
 		
 	}
-
+ function get_sitedata_dy_page_id($varname,$id)
+	{
+		$page = get_post( $id );
+		return get_metadata('post',$page->ID, $varname, true);
+		
+	}
 function remove_opensans_font()
 	{
 			
