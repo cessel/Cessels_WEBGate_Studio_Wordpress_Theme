@@ -10,24 +10,42 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: nulled theme, empty theme, cessel's theme
 Text Domain: cesselWebgateTheme
 */
+/* Настройки шаблона */
 
+html
+	{
+		height:100%;
+	}
+
+body
+	{
+		height:100%;
+	}
+.nav>li>a
+	{
+		border-radius:0px;
+	}
+
+
+
+	
 /* Extra small devices (phones, less than 768px) */
 
 
 
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min)
+@media (min-width: 768px)
 	{
 		
 	}
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min)	
+@media (min-width: 992px)	
 	{
 		
 	}
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min)
+@media (min-width: 1200px)
 	{
 		
 	}
