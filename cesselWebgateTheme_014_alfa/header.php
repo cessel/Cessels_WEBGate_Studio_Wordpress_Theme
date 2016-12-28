@@ -20,7 +20,6 @@
 <meta http-equiv="ExpiresDefault " content="access plus 10 years" />
 <title><?php wp_title(); ?></title>
 <link rel="shortcut icon" href="<? echo CES_IMG; ?>/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 <script type="text/javascript" src="//yastatic.net/jquery/2.1.1/jquery.min.js"></script>
@@ -33,6 +32,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <? wp_head(); ?>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
 </head>
 
 <body <?php body_class(); ?>>
