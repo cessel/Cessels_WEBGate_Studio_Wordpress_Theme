@@ -220,5 +220,13 @@ function rus_date() {
  return strtr(date(func_get_arg(0)), $translate);
  }
  }
+function phone_convert_to_link($tel)
+	{
+		echo "<a href='tel:".preg_replace('/[ -()]/','',$tel)."'>".$tel."</a>";
+	}
+function email_convert_to_link($email)
+	{
+		echo "<a href='mailto:".$email."'>".$email."</a>";
+	}
 
 ?>
