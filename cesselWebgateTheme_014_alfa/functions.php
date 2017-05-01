@@ -268,5 +268,24 @@ function email_convert_to_link($email)
 	{
 		echo "<a href='mailto:".$email."'>".$email."</a>";
 	}
+function generate_owl_from_post($cat_id,$numposts)
+	{
+		$args = array
+			(
+				'category' => $cat_id,
+				'numberposts' => $numposts
+			);
+		$posts = get_posts($args);
+		
+		$return = "<div class='owl-carousel'>";
+		
+		foreach ($posts as $post)
+			{
+				
+			}
+			
+		$return .= "</div>";
+		return $return;
+	}
 
 ?>
