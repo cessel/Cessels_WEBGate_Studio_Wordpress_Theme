@@ -1,13 +1,13 @@
 <!--MODALS-->
 
-<div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="Заказать обратный звонок" aria-hidden="true">
+<div class="modal fade" id="modal-1" tabindex="-1" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close close-white" data-dismiss="modal" aria-label="Закрыть">
+				<button type="button" class="close close-white" data-dismiss="modal">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				<p class="modal-title-new" id="myModalLabel">Ваше имя и телефон</p>
+				<p class="modal-title-new" id="callback">Ваше имя и телефон</p>
 			</div>
 			<div class="modal-body">
 				<? echo do_shortcode('[contact-form-7 id="16" title="Обратный звонок в футере"]'); ?> 
@@ -16,14 +16,14 @@
 	</div>
 </div>
 
-<div class="modal fade" id="modal-conf" tabindex="-1" role="dialog" aria-labelledby="Политика конфиденциальности" aria-hidden="true">
+<div class="modal fade" id="modal-conf" tabindex="-1" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+				<button type="button" class="close" data-dismiss="modal">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				<h4 class="modal-title" id="myModalLabel">Политика конфиденциальности</h4>
+				<h4 class="modal-title" id="private-policy">Политика конфиденциальности</h4>
 			</div>
 			<div class="modal-body">
 				<div class="confsbna">Введение</div>
@@ -55,12 +55,12 @@
 	</div>
 </div>
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Сообщение отправлено</h4>
+        <h4 class="modal-title" id="send-success">Сообщение отправлено</h4>
       </div>
       <div class="modal-body">
         <p class="text-success">Ваша заказ успешно отправлен</p>
