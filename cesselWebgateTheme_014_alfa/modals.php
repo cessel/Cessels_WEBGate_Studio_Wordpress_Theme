@@ -10,7 +10,7 @@
 				<p class="modal-title-new" id="callback">Ваше имя и телефон</p>
 			</div>
 			<div class="modal-body">
-				<? echo do_shortcode('[contact-form-7 id="16" title="Обратный звонок в футере"]'); ?> 
+				<?php echo do_shortcode('[contact-form-7 id="16" title="Обратный звонок в футере"]'); ?> 
 			</div>
 		</div>
 	</div>
