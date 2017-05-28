@@ -1,4 +1,7 @@
-<?
+<?php
+
+/* Команда консоли для выгрузки дампа базы данных: "mysqldump -u cessel -p dbname > dump.sql" */
+
 define('CES_IMG',get_template_directory_uri()."/img");
 
 remove_action( 'wp_head',             'wp_enqueue_scripts');
@@ -262,7 +265,7 @@ function rus_date() {
  }
 function phone_convert_to_link($tel)
 	{
-		echo "<a href='tel:".preg_replace('/[ -()]/','',$tel)."'>".$tel."</a>";
+		echo "<a href='tel:".preg_replace('/[ \-()]/','',$tel)."'>".$tel."</a>";
 	}
 function email_convert_to_link($email)
 	{
