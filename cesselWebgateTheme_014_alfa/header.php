@@ -18,7 +18,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title><?php wp_title(); ?></title>
-<link rel="shortcut icon" href="<? echo CES_IMG; ?>/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo CES_IMG; ?>/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-<? wp_head(); ?>
+<?php wp_head(); ?>
 
 <script type="text/javascript">
 	ymaps.ready(init);
@@ -44,7 +44,7 @@
 
 		function init()
 			{
-				var adress = '<? echo $contacts['adress']; ?>';
+				var adress = '<?php echo $contacts['adress']; ?>';
 	            ymaps.geocode(adress).then(function (res)
 					{
 						var position = res.geoObjects.get(0).geometry.getCoordinates();
@@ -60,10 +60,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-<? get_template_part('modals'); ?>
+<?php get_template_part('modals'); ?>
 
-<? /* БЛОК НАСТРОЕК */ ?>
+<?php /* БЛОК НАСТРОЕК */ ?>
 
-				<? $contacts['tel'] = get_sitedata('tel'); ?>
-				<? $logo_src = wp_get_attachment_image_url(get_theme_mod( 'custom_logo'),'full'); ?>
+				<?php $contacts['tel'] = get_sitedata('tel'); ?>
+				<?php $logo_src = wp_get_attachment_image_url(get_theme_mod( 'custom_logo'),'full'); ?>
 
