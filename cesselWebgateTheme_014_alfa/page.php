@@ -16,40 +16,27 @@
 
 get_header(); ?>
 
-<?php if( have_posts() ){ while( have_posts() ){ the_post(); ?>
 	<div class='container'>
-		<div class="row visible-lg">
-			<div class="col-lg-12">
-				<?php the_content(); ?>
+		<div class='row'>
+			<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+				<?php  if( have_posts() ){while(have_posts()){the_post();
+						the_content();
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					}} else echo "<h2>Записей нет.</h2>";?>
 			</div>
 		</div>
-		<div class="row visible-md">
-			<div class="col-md-12">
-				<?php the_content(); ?>
-			</div>
-		</div>
-		<div class="row visible-sm">
-			<div class="col-sm-12">
-				<?php the_content(); ?>
-			</div>
-		</div>
-		<div class="row visible-xs">
-			<div class="col-xs-12">
-				<?php the_content(); ?>
-			</div>
-		</div>
-	</div>	
+	</div>
 
-<?php } // конец while ?>
-
-
-
-
-
-
-<?php
-} // конец if
-else 
-	echo "<h2>Записей нет.</h2>";
-?>
 <?php get_footer(); ?>
