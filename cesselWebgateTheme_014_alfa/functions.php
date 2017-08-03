@@ -1,6 +1,7 @@
 <?php
 
-/* Команда консоли для выгрузки дампа базы данных: "mysqldump -u cessel -p dbname > dump.sql" */
+/* Команда консоли для выгрузки дампа базы данных: "mysqldump -u cessel -p c9 > dump.sql" */
+/* Команда консоли для установки PhpMyAdmin phpmyadmin-ctl install */
 
 define('CES_IMG',get_template_directory_uri()."/img");
 
@@ -61,7 +62,6 @@ remove_filter( 'rest_pre_serve_request', '_oembed_rest_pre_serve_request', 10, 4
 
 
 
-if ( !is_admin() ) wp_deregister_script('jquery');
 
 /* АВТОМАТИЧЕСКОЕ ПОДКЛЮЧЕНИЕ JS И CSS ФАЙЛОВ ИЗ ПАПКИ /js/ и /css/ СООТВЕТСТВЕННО */
 
