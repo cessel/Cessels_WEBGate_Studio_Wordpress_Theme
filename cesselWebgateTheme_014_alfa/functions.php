@@ -290,5 +290,17 @@ function generate_owl_from_post($cat_id,$numposts)
 		$return .= "</div>";
 		return $return;
 	}
+	
+	/* для bootstrap4 меню*/
+add_filter( 'nav_menu_css_class', 'add_my_class_to_nav_menu', 10, 3 );
+function add_my_class_to_nav_menu( $classes, $item  ){
+	$classes[] = 'nav-item';
+	return $classes;
+}
+add_filter( 'nav_menu_link_attributes', 'nav_link_filter', 10, 4 );
+function nav_link_filter( $atts, $item, $args, $depth ){
+	$atts['class'] = 'nav-link';
+	return $atts;
+}
 
 ?>
