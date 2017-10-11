@@ -67,17 +67,20 @@ remove_filter( 'rest_pre_serve_request', '_oembed_rest_pre_serve_request', 10, 4
 
 function CWG_scripts()
 	{
-		$dir_js = get_template_directory().'/js/';
-		$dir_css = get_template_directory().'/css/';
+
+		$dir_js = get_template_directory().'/js/lib/';
+		$dir_css = get_template_directory().'/css/lib/';
 		$js_files=scandir($dir_js);
 		$css_files=scandir($dir_css);
 		$i=0;
+		$uri_css = get_template_directory_uri() . '/css/';
+		$uri_js = get_template_directory_uri() . '/js/';
 		foreach ($js_files as $js)
 			{
 				$extension = explode('.',$js);
 				if($extension[count($extension)-1]=='js')
 					{
-						wp_enqueue_script('script'.$i++, get_template_directory_uri() . '/js/' . $js);
+						wp_enqueue_script('script'.$i++,  $uri_js.'/lib/'. $js);
 					}
 				
 			}
@@ -87,14 +90,16 @@ function CWG_scripts()
 				$extension = explode('.',$css);
 				if($extension[count($extension)-1]=='css')
 					{
-						wp_enqueue_style('style'.$i++, get_template_directory_uri() . '/css/' . $css);
+						wp_enqueue_style('style'.$i++, $uri_css .'/lib/'. $css);
 					}
 			}
+		wp_enqueue_style('style_main', $uri_css . '/styles.css');
+		wp_enqueue_script('script_main', $uri_js . '/misc.js');
 	}
 add_action( 'wp_enqueue_scripts', 'CWG_scripts' );
+
 	
-	
-	
+
 function modal_toggle_link($link_text,$id_modal,$link_class='btn btn-default')
 	{
 		echo '<a href="'.$id_modal.'" data-toggle="modal" data-target="'.$id_modal.'" class="'.$link_class.'">'.$link_text.'</a>';
